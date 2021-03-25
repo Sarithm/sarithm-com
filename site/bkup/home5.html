@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="apple-itunes-app" content="app-id=1065951746, affiliate-data=myAffiliateData, app-argument=myURL">
+<title>SARITHM - HOME</title>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="bjqs.css">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="colorbox.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/bjqs-1.3.min.js"></script>
+<script src="js/jquery.colorbox.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+<script src="script.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+  if($(window).width()<1000){
+    $(".curProj1, .upProj1, .comProj1").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    //alert($(".projScrillHolder2").offset().left);
+    //alert($(this).parent().prev().children(0).offset().left);
+    if($(this).parent().prev().children(0).offset().left <20){
+  $(this).next().removeClass("selected");
+  $(this).addClass("selected");
+  //alert($(window).width());
+  $(this).parent().prev().children(0).animate({
+    left: "+="+ ($(window).width()-45)
+  }, 300);
+  //alert($(this).parent().prev().children(0).offset().left);
+}
+
+});
+$(".curProj2, .upProj2, .comProj2").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+
+    if($(this).parent().prev().children(0).offset().left >0){
+  $(this).prev().removeClass("selected");
+  $(this).addClass("selected");
+  //alert($(window).width()+10);
+  $(this).parent().prev().children(0).animate({
+    //alert($(window).width() + 10);
+    left: "-="+ ($(window).width()-45)
+  }, 300);
+}
+});
+
+  }else{
+
+     $(".curProj1").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    //alert($(".projScrillHolder2").offset().left);
+    if($(".projScrillHolder2").offset().left <92){
+  $(".curProj2").removeClass("selected");
+  $(this).addClass("selected");
+  $(".projScrillHolder2").animate({
+    left: "+=399"    
+  }, 300);
+}
+});
+$(".curProj2").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    //alert($(".projScrillHolder2").offset().left);
+    if($(".projScrillHolder2").offset().left >0){
+  $(".curProj1").removeClass("selected");
+  $(this).addClass("selected");
+  
+  $(".projScrillHolder2").animate({
+    left: "-=399"    
+  }, 300);
+}
+});
+
+
+
+
+$(".upProj1").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    if($(".projScrillHolder").offset().left < 800){
+  $(".upProj2").removeClass("selected");
+  $(this).addClass("selected");
+  $(".projScrillHolder").animate({
+    left: "+=399"    
+  }, 300);
+}
+});
+$(".upProj2").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    if($(".projScrillHolder").offset().left >500){
+  $(".upProj1").removeClass("selected");
+  $(this).addClass("selected");
+  
+  $(".projScrillHolder").animate({
+    left: "-=399"    
+  }, 300);
+}
+});
+
+
+$(".comProj1").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    if($(".projScrillHolder1").offset().left < 400){
+  $(".comProj2").removeClass("selected");
+  $(this).addClass("selected");
+  $(".projScrillHolder1").animate({
+    left: "+=399"    
+  }, 300);
+}
+});
+$(".comProj2").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    if($(".projScrillHolder1").offset().left >100){
+  $(".comProj1").removeClass("selected");
+  $(this).addClass("selected");
+  
+  $(".projScrillHolder1").animate({
+    left: "-=399"    
+  }, 300);
+}
+});
+}
+if($(window).width()<600){
+	 $('#banner-slide').bjqs({
+    animtype      : 'slide',
+    height        : '150',
+    width         : '100%',
+    responsive    : true,
+    randomstart   : true
+  });
+  }else{
+    $('#banner-slide').bjqs({
+    animtype      : 'slide',
+    height        : '487',
+    width         : '100%',
+    responsive    : true,
+    randomstart   : true
+  });
+  }
+
+	 $(".innerBlock").mouseenter(function(){
+	 	$(this).addClass("hover");
+	 	//alert("hi satya");
+	 });
+	 $(".innerBlock").mouseleave(function(){
+	 	$(this).removeClass("hover");
+	 	//alert("hi satya");
+	 });
+
+
+	 $(".upProj1, .upProj2, .comProj1, .comProj2, .curProj1, .curProj2").mouseenter(function(){
+	
+		$(this).css("cursor","pointer");
+
+	});
+
+
+
+
+	});
+	 </script>
+
+</head>
+
+
+
+<body ng-app="docsTemplateUrlDirective">
+<!-- This contains the hidden content for inline calls -->
+
+	<div class="page">
+
+		<div sarithm-header></div>
+
+		<div class="mainBody">
+			<div class="bannerBlock">
+			<div id="banner-slide" style="margin:auto;">
+
+		        <!-- start Basic Jquery Slider -->
+		        <ul class="bjqs">
+		          <li><img class="bannerImg" src="images/mainBanner.png" title="" width="100%"></li>
+		          
+		        </ul>
+		        <!-- end Basic jQuery Slider -->
+
+      		</div>
+      	</div>
+      	<div class="aboutBlock">
+      			<div class="abtContent">
+      				<div class="content padLarge" align="center">
+                <div class="cta"><div><img src="images/cta-11.png"><br/>[1] Infrastructure as code.  Build your infrastructure as many times as you like, in as many regions as you need. </div></div>
+                <div class="cta"><div><img src="images/cta-12.png"><br/>[2] Encourage your team by training them with core skills. Be the seed of Lean>>Agile>>DevOps culture in your organization. </div></div>
+                <div class="cta"><div><img src="images/cta-13.png"><br/> [3] Ship application along with it's environment in a Docker container! scale up your service with ease!! </div></div>
+                <div class="cta"><div><img src="images/cta-14.png"><br/> [4] Deploy your micro services to K8s cluster, secure it in vault, monitor it with fluentd and consul. </div></div>
+                <br/><br/><br/></div>
+      				
+      			</div>		
+      		</div>
+          <!--div class="productsBlock"-->
+            <!--div class="proContent"-->
+              <div class="contentHome padLarge" align="center">
+                <div class="scrollMenu">
+                  <span class="homeTitle" style="color:#fff">CUSTOMERS</span>
+                  <div class="customers">
+                    <div class="custLogo"><div class="cLogo"><img src="images/stem-logo.png"></div></div>
+                    <div class="custLogo"><div class="cLogo"><img src="images/customer-aroma.png"></div></div>
+                    <div class="custLogo"><div class="cLogo"><img src="images/stem-logo.png"></div></div>
+                    <div class="custLogo"><div class="cLogo"><img src="images/customer-aroma.png"></div></div>
+                    <div class="custLogo"><div class="cLogo"><img src="images/stem-logo.png"></div></div>
+                    <div class="custLogo"><div class="cLogo"><img src="images/customer-aroma.png"></div></div>
+                  </div>
+                </div>
+                <div class="scrollMenu">
+                  <span class="homeTitle" style="color:#fff">PRODUCTS</span>
+                  <div class="products">
+                    <div class="proLogo"><div class="cLogo"><a href="https://youtu.be/7rf5Z-exHwc" target="_blank"><img src="images/product-xstraw.png"></a></div>
+                    <div class="pDesc"><b>XSTRAW</b><br/><br/>Share your team schedule with other parents of your child’s team. Any coach or parent can easily own or manage… <br/><br/>
+                        <a href="products.html"><div class="button">KNOW MORE <span style="font-size:18px;">»</span></div></a>
+                      </div>
+                    </div>
+                    <div class="proLogo"><div class="cLogo"><a href="https://itunes.apple.com/us/app/minicash/id913387948?ls=1&mt=8" target="_blank"><img src="images/product-minicash.png"></a></div>
+                      <div class="pDesc"><b>MINICASH</b><br/><br/>Have you ever needed to spilt shared expenses or lent an item to someone then forgot? Family events and weekend… <br/><br/><a href="products.html"><div class="button">KNOW MORE <span style="font-size:18px;">»</span></div></a></div>
+                    </div>
+                  </div>
+                  <br/><br/><br/>
+            </div>
+              </div>
+              
+            <!--/div-->
+            <div style="clear:both; height:50px;"></div>
+        <!--/div-->
+		</div>
+
+		<div sarithm-footer></div>
+
+	</div>
+
+</body>
+
+
+
+</html>
+

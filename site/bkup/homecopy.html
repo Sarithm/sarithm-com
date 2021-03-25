@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SARITHM - HOME</title>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="bjqs.css">
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="colorbox.css" />
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/bjqs-1.3.min.js"></script>
+<script src="js/jquery.colorbox.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+<script src="script.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+  if($(window).width()<1000){
+    $(".curProj1, .upProj1, .comProj1").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    //alert($(".projScrillHolder2").offset().left);
+    //alert($(this).parent().prev().children(0).offset().left);
+    if($(this).parent().prev().children(0).offset().left <20){
+  $(this).next().removeClass("selected");
+  $(this).addClass("selected");
+  //alert($(window).width());
+  $(this).parent().prev().children(0).animate({
+    left: "+="+ ($(window).width()-45)
+  }, 300);
+  //alert($(this).parent().prev().children(0).offset().left);
+}
+
+});
+$(".curProj2, .upProj2, .comProj2").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+
+    if($(this).parent().prev().children(0).offset().left >0){
+  $(this).prev().removeClass("selected");
+  $(this).addClass("selected");
+  //alert($(window).width()+10);
+  $(this).parent().prev().children(0).animate({
+    //alert($(window).width() + 10);
+    left: "-="+ ($(window).width()-45)
+  }, 300);
+}
+});
+
+  }else{
+
+     $(".curProj1").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    //alert($(".projScrillHolder2").offset().left);
+    if($(".projScrillHolder2").offset().left <92){
+  $(".curProj2").removeClass("selected");
+  $(this).addClass("selected");
+  $(".projScrillHolder2").animate({
+    left: "+=399"    
+  }, 300);
+}
+});
+$(".curProj2").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    //alert($(".projScrillHolder2").offset().left);
+    if($(".projScrillHolder2").offset().left >0){
+  $(".curProj1").removeClass("selected");
+  $(this).addClass("selected");
+  
+  $(".projScrillHolder2").animate({
+    left: "-=399"    
+  }, 300);
+}
+});
+
+
+
+
+$(".upProj1").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    if($(".projScrillHolder").offset().left < 800){
+  $(".upProj2").removeClass("selected");
+  $(this).addClass("selected");
+  $(".projScrillHolder").animate({
+    left: "+=399"    
+  }, 300);
+}
+});
+$(".upProj2").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    if($(".projScrillHolder").offset().left >500){
+  $(".upProj1").removeClass("selected");
+  $(this).addClass("selected");
+  
+  $(".projScrillHolder").animate({
+    left: "-=399"    
+  }, 300);
+}
+});
+
+
+$(".comProj1").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    if($(".projScrillHolder1").offset().left < 400){
+  $(".comProj2").removeClass("selected");
+  $(this).addClass("selected");
+  $(".projScrillHolder1").animate({
+    left: "+=399"    
+  }, 300);
+}
+});
+$(".comProj2").click(function(){
+  if ($(':animated').length) {
+        return false;
+    }
+    if($(".projScrillHolder1").offset().left >100){
+  $(".comProj1").removeClass("selected");
+  $(this).addClass("selected");
+  
+  $(".projScrillHolder1").animate({
+    left: "-=399"    
+  }, 300);
+}
+});
+}
+
+	 $('#banner-slide').bjqs({
+    animtype      : 'slide',
+    height        : 567,
+    width         : '100%',
+    responsive    : true,
+    randomstart   : true
+  });
+
+	 $(".innerBlock").mouseenter(function(){
+	 	$(this).addClass("hover");
+	 	//alert("hi satya");
+	 });
+	 $(".innerBlock").mouseleave(function(){
+	 	$(this).removeClass("hover");
+	 	//alert("hi satya");
+	 });
+
+
+	 $(".upProj1, .upProj2, .comProj1, .comProj2, .curProj1, .curProj2").mouseenter(function(){
+	
+		$(this).css("cursor","pointer");
+
+	});
+
+
+
+
+	});
+	 </script>
+
+</head>
+
+
+
+<body ng-app="docsTemplateUrlDirective">
+<!-- This contains the hidden content for inline calls -->
+
+	<div class="page">
+
+		<div sarithm-header></div>
+
+		<div class="mainBody">
+			<div class="bannerBlock">
+			<div id="banner-slide" style="margin:auto;">
+
+		        <!-- start Basic Jquery Slider -->
+		        <ul class="bjqs">
+		          <li><img src="images/mainBanner.png" title="" width="100%"></li>
+		          
+		        </ul>
+		        <!-- end Basic jQuery Slider -->
+
+      		</div>
+      	</div>
+      	<div class="aboutBlock">
+      			<div class="abtContent">
+      				<div class="content padLarge"><span class="homeText"><ul>
+                <li>We strive to provide highly engaged consultants who can offer outstanding services to our clients. </li>
+<li>To simplify the process we break down System Administrators into two categories, OnGoing and OnDemand. </li>
+<li>We believe that the infrastructure transparency leads to higher efficiency in infrastructure management. </li>
+<li>Our passion for software development truly goes hand in hand with mobile technology.</li>
+<li>We have strived to create algorithms that offer users versatility while running easier, longer, and function seamlessly on any operating system. </li></ul></span><br/><br/><br/></div>
+      				
+      			</div>
+      			<div style="clear:both; height:50px;"></div>
+      		</div>
+          <div class="productsBlock">
+            <div class="proContent">
+              <div class="content padLarge" align="center"><span class="homeTitle" style="color:#fff">our range of products includes the following...</span><br/><br/><br/>
+                <div class="products">
+                <div class="proLogo"><div class="cLogo"><img src="images/product-cancercon.png" width="100%"></div>
+                <div class="pDesc"><b>CANCER CON</b><br/><br/>We believe that the infrastructure transparency leads to higher efficiency in infrastructure management.<br/><br/>
+                  <div class="button">KNOW MORE <span style="font-size:18px;">»</span></div></div></div>
+                <div class="proLogo"><div class="cLogo"><img src="images/product-minicash.png" width="100%"></div>
+                <div class="pDesc"><b>MINI CASH</b><br/><br/>We believe that the infrastructure transparency leads to higher efficiency in infrastructure management.<br/><br/><div class="button">KNOW MORE <span style="font-size:18px;">»</span></div></div></div>
+              </div><br/><br/><br/>
+              </div>
+              
+            </div>
+            <div style="clear:both; height:50px;"></div>
+          </div>
+
+          <div class="customersBlock">
+            <div class="custContent">
+              <div class="content padLarge"><span class="homeTitle">CUSTOMERS</span>
+                <div class="customers">
+                <div class="custLogo"><div class="cLogo"><img src="images/customer-stupidcancer.png" width="100%"></div></div>
+                
+              </div>
+              </div>
+              
+            </div>
+            <div style="clear:both; height:50px;"></div>
+          </div>
+		</div>
+
+		<div sarithm-footer></div>
+
+	</div>
+
+</body>
+
+
+
+</html>
+

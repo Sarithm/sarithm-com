@@ -1,0 +1,138 @@
+
+<!--<link href="style1.css" rel="stylesheet" type="text/css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+	//$(".mobileMenu").hide();
+	$(".showmmenu").click(function(){
+		$(".mobileMenu").animate({
+    width: [ "toggle", "swing" ],
+    height: [ "toggle", "swing" ],
+    opacity: "toggle"
+  }, 200, "linear");
+	})
+	 $(".menuItem").mouseenter(function(){
+	 	//if($(this).hasClass("current")){
+	 		//$(".current").removeClass("current");
+	 	//}else{
+	 		$(this).addClass("current");
+	 	//}
+	 });
+	 $(".menuItem").mouseleave(function(){
+	 	$(this).removeClass("current");
+	 });
+	 $(".comp").mouseenter(function(){
+	 	$(".compMenu").css("display","block");
+	 });
+	 $(".comp").mouseleave(function(){
+	 	$(".compMenu").css("display","none");
+	 });
+	 $(".about").mouseenter(function(){
+	 	$(".abtMenu").css("display","block");
+	 });
+	 $(".about").mouseleave(function(){
+	 	$(".abtMenu").css("display","none");
+	 });
+	 $(".customer").mouseenter(function(){
+	 	$(".corMenu").css("display","block");
+	 });
+	 $(".customer").mouseleave(function(){
+	 	$(".corMenu").css("display","none");
+	 });
+	 $("#currentProj").mouseenter(function(){
+	 	$(this).css("cursor","pointer");
+	$(".currentprojMenu").css("display","block");
+	$(".completedprojMenu").css("display","none");
+	$(".upcomingprojMenu").css("display","none");
+});
+$(".projects").mouseleave(function(){
+	$(".currentprojMenu").css("display","none");
+});
+$("#completedProj").mouseenter(function(){
+	$(this).css("cursor","pointer");
+	$(".completedprojMenu").css("display","block");
+	$(".currentprojMenu").css("display","none");
+	$(".upcomingprojMenu").css("display","none");
+});
+$(".projects").mouseleave(function(){
+	$(".completedprojMenu").css("display","none");
+});
+$("#upcomingProj").mouseenter(function(){
+	$(this).css("cursor","pointer");
+	$(".upcomingprojMenu").css("display","block");
+	$(".completedprojMenu").css("display","none");
+	$(".currentprojMenu").css("display","none");
+});
+$(".projects").mouseleave(function(){
+	$(".upcomingprojMenu").css("display","none");
+});
+});
+
+</script>
+
+
+<div class="header">
+			<div class="headerContent">
+				<div class="logo"><a href="home.html"><img src="images/logo.png"></a></div>
+				<div class="showmmenu">
+					<span style="display:block; border-top:#333333 5px solid; height:5px; width:20px;"></span>
+					<span style="display:block; border-top:#333333 5px solid; height:5px; width:20px;"></span>
+					<span style="display:block; border-top:#333333 5px solid; width:20px;"></span>
+				</div>
+				<div class="mobileMenu">
+					<div style="background-color:#333333; color:white;">
+						<ul>
+					<li class="menuItem"><a href="products.html">PRODUCTS</a></li>
+					<li class="menuItem about"><a href="company.html">SERVICES</a>
+					<div class="mabtMenu">
+							<ul class="msubMenu" style="position:relative; top:10px; left:-10px">
+								<a href="mobile.html"><li class="subMenuItem">MOBILE</li></a>
+								<a href="development.html"><li class="subMenuItem">SOFTWARE<br/>DEVELOPMENT</li></a>
+								<a href="consulting.html"><li class="subMenuItem">IT CONSULTING</li></a>
+								<a href="infra.html"><li class="subMenuItem">INFRASTRUCTURE<br/>MAINTENANCE</li></a>
+							</ul>
+						</div>
+						</li>
+					<li class="menuItem projects"><a href="learning.html" style="display:block;">LEARN</a></li>
+					<li class="menuItem"><a href="contactus.html">COMPANY</a>
+						<div class="mcompMenu" style=" z-index:10;">
+							<ul class="msubMenu" style="position:relative; top:18px; left:-20px">
+								<a href="aboutus.html"><li class="subMenuItem">ABOUT US</li></a>
+								<a href="contactus.html"><li class="subMenuItem">CONTACT US</li></a>
+							</ul>
+						</div>
+						<div style="clear:both"></div></li>
+				</ul><p>&nbsp;</p>
+					</div>
+				</div>
+
+				<div class="menu">
+					<ul>
+					<li class="menuItem"><a href="products.html">PRODUCTS</a></li>
+					<li class="menuItem about"><a href="">SERVICES
+					<div class="abtMenu" style="position:absolute; z-index:10;">
+							<ul class="subMenu" style="position:relative; top:18px; left:-20px">
+								<a href="mobile.html"><li class="subMenuItem">MOBILE</li></a>
+								<a href="development.html"><li class="subMenuItem">SOFTWARE<br/>DEVELOPMENT</li></a>
+								<a href="consulting.html"><li class="subMenuItem">IT CONSULTING</li></a>
+								<a href="infra.html"><li class="subMenuItem">INFRASTRUCTURE<br/>MAINTENANCE</li></a>
+							</ul>
+						</div>
+						</li>
+					
+					<li class="menuItem"><a href="learning.html" style="display:block;">LEARN</a></li>
+					<li class="menuItem comp"><a href="aboutus.html">COMPANY</a>
+						<div class="compMenu" style="position:absolute; z-index:10;">
+							<ul class="subMenu" style="position:relative; top:18px; left:-20px">
+								<a href="aboutus.html"><li class="subMenuItem">ABOUT US</li></a>
+								<a href="contactus.html"><li class="subMenuItem">CONTACT US</li></a>
+								
+								
+							</ul>
+						</div></li>
+				</ul>
+				</div>
+			</div>
+			<div style="clear:both"></div>
+		</div>

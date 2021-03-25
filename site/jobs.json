@@ -1,0 +1,21 @@
+[{
+      "title": "iOS Application Developers",
+      "required": "C, Object C, OpenGL ES, Core Animation, Core Image",
+      "bonus":"JASON, SQL, Operating System and RDBMS Fundamentals",
+      "details":"details file URL"
+    },{
+      "title": "UNIX System Administrator",
+      "required": "AIX, Linux and Solaris, TCP/IP",
+      "bonus":"Shell / Perl script, RDBMS & Programming Fundamentals",
+      "details":"details file URL"
+    },{
+      "title": "Windows System Administrator",
+      "required": "Microsoft Windows 2008/XP/7/8, Microsoft Server 2008, TCP/IP ",
+      "bonus":"Shell / Perl script, RDBMS & Programming Fundamentals",
+      "details":"details file URL"
+    },{
+      "title": "Quality Engineer",
+      "required": "Python, VMware, Linux, Operating System Fundamentals",
+      "bonus":"RDBMS & Programming Fundamentals",
+      "details":"details file URL"
+    }]
